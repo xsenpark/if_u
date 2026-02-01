@@ -127,15 +127,7 @@ const render = (items) => {
 
     const head = document.createElement("div");
     head.className = "card-head";
-
-    const linkButton = document.createElement("a");
-    linkButton.className = "link-button";
-    linkButton.href = item.link || "#";
-    linkButton.target = "_blank";
-    linkButton.rel = "noopener noreferrer";
-    linkButton.textContent = "자료 보기";
-
-    head.append(title, linkButton);
+    head.append(title);
 
     const badges = document.createElement("div");
     badges.className = "badges";
@@ -154,7 +146,14 @@ const render = (items) => {
 
     badges.append(type, year, instructor);
 
-    card.append(head, badges);
+    const linkButton = document.createElement("a");
+    linkButton.className = "link-button";
+    linkButton.href = item.link || "#";
+    linkButton.target = "_blank";
+    linkButton.rel = "noopener noreferrer";
+    linkButton.textContent = "link";
+
+    card.append(head, badges, linkButton);
     list.appendChild(card);
   });
 };
