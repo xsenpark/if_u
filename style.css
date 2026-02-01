@@ -1,9 +1,9 @@
 :root {
   --ink: #1f1b17;
   --muted: #6d635b;
-  --paper: #ffffff;
-  --accent: #003A70;
-  --accent-2: #4B77A8;
+  --paper: #f6f9ff;
+  --accent: #0f3b73;
+  --accent-2: #6fb6ff;
   --shadow: rgba(25, 20, 16, 0.12);
 }
 
@@ -15,7 +15,9 @@ body {
   margin: 0;
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: var(--ink);
-  background: #ffffff;
+  background: radial-gradient(circle at 15% 10%, rgba(111, 182, 255, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(15, 59, 115, 0.12), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f2f6ff 60%, #eef4ff 100%);
 }
 
 .top {
@@ -65,6 +67,7 @@ body {
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   background: var(--paper);
+  border: 1px solid rgba(15, 59, 115, 0.08);
   padding: 20px;
   border-radius: 18px;
   box-shadow: 0 12px 24px var(--shadow);
@@ -112,7 +115,7 @@ select:focus {
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 12px 20px var(--shadow);
-  border: 1px solid rgba(31, 27, 23, 0.08);
+  border: 1px solid rgba(15, 59, 115, 0.12);
   display: grid;
   gap: 10px;
 }
@@ -136,7 +139,7 @@ select:focus {
 }
 
 .badge {
-  background: rgba(31, 95, 74, 0.1);
+  background: rgba(15, 59, 115, 0.12);
   color: var(--accent);
   padding: 4px 10px;
   border-radius: 999px;
@@ -166,7 +169,7 @@ select:focus {
   background: #ffffff;
   border-radius: 16px;
   padding: 18px;
-  border: 1px solid rgba(31, 27, 23, 0.08);
+  border: 1px solid rgba(15, 59, 115, 0.12);
 }
 
 .rules h2 {
@@ -198,6 +201,6 @@ select:focus {
 }
 
 .badge-muted {
-  background: rgba(31, 27, 23, 0.08);
-  color: var(--muted);
+  background: rgba(111, 182, 255, 0.18);
+  color: #0f2f5f;
 }
