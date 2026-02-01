@@ -109,7 +109,15 @@ const render = (items) => {
     type.className = "badge";
     type.textContent = item.type;
 
-    badges.appendChild(type);
+    const year = document.createElement("span");
+    year.className = "badge badge-muted";
+    year.textContent = `${item.year}`;
+
+    const instructor = document.createElement("span");
+    instructor.className = "badge badge-muted";
+    instructor.textContent = `${item.instructor}`;
+
+    badges.append(type, year, instructor);
 
     card.append(title, badges);
     list.appendChild(card);

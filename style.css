@@ -198,3 +198,8 @@ select:focus {
     align-items: flex-start;
   }
 }
+
+.badge-muted {
+  background: rgba(31, 27, 23, 0.08);
+  color: var(--muted);
+}
