@@ -15,9 +15,7 @@ body {
   margin: 0;
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at 15% 10%, rgba(111, 182, 255, 0.22), transparent 45%),
-    radial-gradient(circle at 85% 0%, rgba(15, 59, 115, 0.12), transparent 40%),
-    linear-gradient(180deg, #ffffff 0%, #f2f6ff 60%, #eef4ff 100%);
+  background: #ffffff;
 }
 
 .top {
@@ -66,7 +64,7 @@ body {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  background: var(--paper);
+  background: #ffffff;
   border: 1px solid rgba(15, 59, 115, 0.08);
   padding: 20px;
   border-radius: 18px;
@@ -111,7 +109,7 @@ select:focus {
 }
 
 .card {
-  background: #ffffff;
+  background: var(--paper);
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 12px 20px var(--shadow);
