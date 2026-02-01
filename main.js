@@ -102,15 +102,6 @@ const render = (items) => {
     const title = document.createElement("h3");
     title.textContent = item.title;
 
-    const meta = document.createElement("div");
-    meta.className = "meta";
-    meta.innerHTML = `
-      <span>학과: ${item.department}</span>
-      <span>교수: ${item.instructor}</span>
-      <span>연도: ${item.year}</span>
-      <span>출처: ${item.source}</span>
-    `;
-
     const badges = document.createElement("div");
     badges.className = "badges";
 
@@ -120,16 +111,7 @@ const render = (items) => {
 
     badges.appendChild(type);
 
-    const summary = document.createElement("p");
-    summary.textContent = item.summary;
-
-    const link = document.createElement("a");
-    link.href = item.link || "#";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "공식 자료 열기";
-
-    card.append(title, meta, badges, summary, link);
+    card.append(title, badges);
     list.appendChild(card);
   });
 };
