@@ -213,6 +213,7 @@ select:focus {
 }
 
 .card .link-button {
+  text-align: center;
   display: inline-block;
   background: var(--accent);
   color: #ffffff;
