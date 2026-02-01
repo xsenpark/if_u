@@ -71,6 +71,15 @@ const populateSelect = (select, values) => {
   });
 };
 
+const populateYearSelect = (startYear) => {
+  const currentYear = new Date().getFullYear();
+  const years = [];
+  for (let year = currentYear; year >= startYear; year -= 1) {
+    years.push(String(year));
+  }
+  populateSelect(yearSelect, years);
+};
+
 const render = (items) => {
   list.innerHTML = "";
   if (items.length === 0) {
@@ -150,7 +159,7 @@ loadCsv()
     data = rows;
     populateSelect(deptSelect, unique(data, "department"));
     populateSelect(typeSelect, unique(data, "type"));
-    populateSelect(yearSelect, unique(data, "year").sort((a, b) => b.localeCompare(a)));
+    populateYearSelect(2010);
     render(data);
   })
   .catch((error) => {
