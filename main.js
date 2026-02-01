@@ -114,13 +114,21 @@ const normalizeTitle = (value) => {
 };
 
 
+
+const normalizeLink = (value) => {
+  const link = String(value || "").trim();
+  if (!link) return "";
+  if (link.startsWith("http://") || link.startsWith("https://")) return link;
+  return `https://${link}`;
+};
+
 const normalizeRow = (row) => ({
   title: row.title || row.course || "",
   department: row.department || "",
   type: row.type || "",
   year: row.year || "",
   instructor: row.instructor || row.professor || "",
-  link: row.link || "",
+  link: normalizeLink(row.link),
   summary: row.summary || row.semester || "",
 });
 
