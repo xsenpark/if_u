@@ -203,7 +203,8 @@ const filter = () => {
   render(filtered);
 };
 
-[searchInput, deptSelect, typeSelect, yearSelect].forEach((el) => {
+const filters = [searchInput, deptSelect, typeSelect, yearSelect].filter(Boolean);
+filters.forEach((el) => {
   el.addEventListener("input", filter);
   el.addEventListener("change", filter);
 });
