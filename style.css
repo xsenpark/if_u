@@ -1,9 +1,9 @@
 :root {
   --ink: #1f1b17;
   --muted: #6d635b;
-  --paper: #f7f3ee;
-  --accent: #1f5f4a;
-  --accent-2: #e4c36d;
+  --paper: #ffffff;
+  --accent: #003A70;
+  --accent-2: #4B77A8;
   --shadow: rgba(25, 20, 16, 0.12);
 }
 
@@ -15,9 +15,7 @@ body {
   margin: 0;
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 55%),
-    linear-gradient(135deg, #f6efe6, #f4f0e8 40%, #f3ede1);
+  background: #ffffff;
 }
 
 .top {
@@ -88,7 +86,7 @@ select {
   border-radius: 12px;
   padding: 12px 14px;
   font-size: 0.95rem;
-  background: #fffdf9;
+  background: #ffffff;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -110,7 +108,7 @@ select:focus {
 }
 
 .card {
-  background: #fffdf8;
+  background: #ffffff;
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 12px 20px var(--shadow);
@@ -165,7 +163,7 @@ select:focus {
 }
 
 .rules {
-  background: #fff9ed;
+  background: #ffffff;
   border-radius: 16px;
   padding: 18px;
   border: 1px solid rgba(31, 27, 23, 0.08);
