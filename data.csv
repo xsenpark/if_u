@@ -1,5 +1,0 @@
-id,title,department,type,year,instructor,source,link,summary
-1,경영학원론 공개 기말문제,경영대학,기말고사,2023,홍길동,공식 강의자료,https://example.com/sample1,강의 홈페이지에 공개된 기말 기출 문제 PDF
-2,회계학 공개 과제 안내,경영대학,과제,2024,김영희,학과 공지,https://example.com/sample2,학과 공지에 공개된 과제 안내문
-3,마케팅관리 공개 중간고사,경영대학,중간고사,2022,박준호,공식 강의노트,https://example.com/sample3,강의노트에 포함된 공개 중간고사 문제
-4,재무관리 공개 퀴즈,경영대학,퀴즈,2024,이서연,공식 강의자료,https://example.com/sample4,강의 홈페이지에 공개된 퀴즈 자료

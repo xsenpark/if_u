@@ -34,8 +34,20 @@ const parseCsvLine = (line) => {
   return out.map((value) => value.trim());
 };
 
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/1fnptQG1qCvPwiHU30dUnqIh7ZGxAlQ1IIuVu7b4noZg/edit?gid=0#gid=0";
+
+const toCsvUrl = (url) => {
+  if (!url) return "";
+  const match = url.match(/\/d\/([^/]+)/);
+  const gidMatch = url.match(/gid=(\d+)/);
+  const sheetId = match ? match[1] : "";
+  const gid = gidMatch ? gidMatch[1] : "0";
+  return `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${gid}`;
+};
+
 const loadCsv = async () => {
-  const response = await fetch("/data.csv");
+  const csvUrl = toCsvUrl(SHEET_URL);
+  const response = await fetch(csvUrl);
   if (!response.ok) {
     throw new Error("데이터 파일을 불러오지 못했습니다.");
   }
