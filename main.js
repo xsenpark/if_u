@@ -71,6 +71,13 @@ const populateSelect = (select, values) => {
   });
 };
 
+const TYPE_ORDER = ["과제", "퀴즈", "중간고사", "기말고사"];
+
+const orderTypes = (items) => {
+  const seen = new Set(items);
+  return TYPE_ORDER.filter((type) => seen.has(type));
+};
+
 const populateYearSelect = (startYear) => {
   const currentYear = new Date().getFullYear();
   const years = [];
@@ -158,7 +165,7 @@ loadCsv()
   .then((rows) => {
     data = rows;
     populateSelect(deptSelect, unique(data, "department"));
-    populateSelect(typeSelect, unique(data, "type"));
+    populateSelect(typeSelect, orderTypes(unique(data, "type")));
     populateYearSelect(2010);
     render(data);
   })
