@@ -1,6 +1,6 @@
 const list = document.getElementById("list");
 const empty = document.getElementById("empty");
-const searchInput = document.getElementById("search");
+const searchInput = document.getElementById("professor");
 const deptSelect = document.getElementById("dept");
 const typeSelect = document.getElementById("type");
 const yearSelect = document.getElementById("year");
@@ -113,6 +113,17 @@ const normalizeTitle = (value) => {
   return result.replace(/\s+/g, " " ).trim();
 };
 
+
+const normalizeRow = (row) => ({
+  title: row.title || row.course || "",
+  department: row.department || "",
+  type: row.type || "",
+  year: row.year || "",
+  instructor: row.instructor || row.professor || "",
+  link: row.link || "",
+  summary: row.summary || row.semester || "",
+});
+
 const populateYearSelect = (startYear) => {
   const currentYear = new Date().getFullYear();
   const years = [];
@@ -199,7 +210,7 @@ const filter = () => {
 
 loadCsv()
   .then((rows) => {
-    data = rows;
+    data = rows.map(normalizeRow);
     populateSelect(deptSelect, unique(data, "department"));
     populateSelect(typeSelect, orderTypes(unique(data, "type")));
     populateYearSelect(2010);
