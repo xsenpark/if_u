@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNU 공개자료 아카이브</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <p class="kicker">공식 공개자료만</p>
+        <h1>SNU 공개자료 아카이브</h1>
+      </div>
+    </div>
+    <p class="lead">
+      학교·학과·교수님이 <strong>공식적으로 공개한 기출/자료</strong>만 모아 정리합니다.
+      비공개 자료 업로드는 금지됩니다.
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="검색 및 필터">
+      <div class="control">
+        <label for="search">검색</label>
+        <input id="search" type="search" placeholder="과목명, 교수명, 키워드로 검색" />
+      </div>
+      <div class="control">
+        <label for="dept">학과</label>
+        <select id="dept">
+          <option value="">전체</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="type">자료 유형</label>
+        <select id="type">
+          <option value="">전체</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="year">연도</label>
+        <select id="year">
+          <option value="">전체</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="board" aria-live="polite">
+      <div id="empty" class="empty">조건에 맞는 공개 자료가 없습니다.</div>
+      <div id="list" class="grid"></div>
+    </section>
+
+    <section class="rules">
+      <h2>운영 원칙</h2>
+      <ul>
+        <li>자료는 반드시 <strong>공식 공개 링크</strong>만 등록합니다.</li>
+        <li>비공개 문서, 캡처본, 학내 공유 제한 자료는 허용하지 않습니다.</li>
+        <li>현재 목록은 샘플이며, 실제 공식 링크로 교체해야 합니다.</li>
+        <li>문의·추가 요청은 담당자에게 연락해주세요.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>본 사이트는 공식 자료를 큐레이션하는 아카이브입니다. 무단 공유를 금합니다.</p>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
