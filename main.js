@@ -78,6 +78,29 @@ const orderTypes = (items) => {
   return TYPE_ORDER.filter((type) => seen.has(type));
 };
 
+const normalizeTitle = (value) => {
+  if (!value) return "";
+  const blacklist = [
+    "공개",
+    "기출",
+    "문제",
+    "연습문제",
+    "모음",
+    "안내",
+    "과제",
+    "퀴즈",
+    "중간고사",
+    "기말고사",
+    "중간",
+    "기말",
+  ];
+  let result = String(value);
+  blacklist.forEach((word) => {
+    result = result.replaceAll(word, "");
+  });
+  return result.replace(/\s+/g, " " ).trim();
+};
+
 const populateYearSelect = (startYear) => {
   const currentYear = new Date().getFullYear();
   const years = [];
@@ -100,7 +123,7 @@ const render = (items) => {
     card.className = "card";
 
     const title = document.createElement("h3");
-    title.textContent = item.title;
+    title.textContent = normalizeTitle(item.title) || item.title;
 
     const badges = document.createElement("div");
     badges.className = "badges";
