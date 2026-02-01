@@ -38,8 +38,9 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-2), var(--accent));
+  background: url("/snubiz.jpeg") center/cover no-repeat;
   box-shadow: 0 10px 20px var(--shadow);
+  border: 1px solid rgba(31, 27, 23, 0.1);
 }
 
 .kicker {
